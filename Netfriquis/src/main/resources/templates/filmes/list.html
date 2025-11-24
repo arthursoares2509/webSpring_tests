@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes</title>
+    <script>
+        function mostrarMensagem() {
+            const msg = document.getElementById("mensagem");
+            msg.style.display = "block";
+            setTimeout(() => { msg.style.display = "none"; }, 2000);
+        }
+    </script>
+</head>
+<body>
+
+<h1>Lista de Filmes</h1>
+
+<ul>
+    <li>Exemplo de Filme 1 — Gênero (Ano)</li>
+    <li>Exemplo de Filme 2 — Gênero (Ano)</li>
+</ul>
+
+<hr>
+
+<h2>Cadastrar Novo Filme</h2>
+
+<form onsubmit="mostrarMensagem(); return false;">
+    <label>Título: <input type="text" name="titulo" required/></label><br/><br/>
+    <label>Sinopse: <textarea name="sinopse" rows="3" cols="40"></textarea></label><br/><br/>
+    <label>Gênero: <input type="text" name="genero"/></label><br/><br/>
+    <label>Ano de Lançamento: <input type="number" name="anoLancamento"/></label><br/><br/>
+    <button type="submit">Salvar</button>
+</form>
+
+<p id="mensagem" style="display:none; color:green; font-weight:bold;">Filme salvo!</p>
+
+<br>
+<!-- botão para voltar para a página inicial -->
+<a href="index.html" style="padding:10px; background-color:lightgray; text-decoration:none;">Voltar</a>
+
+</body>
+</html>
